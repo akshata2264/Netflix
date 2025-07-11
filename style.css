@@ -1,0 +1,412 @@
+
+
+:root {
+  --primary-color: red;
+  --bg-dark: black;
+  --text-white: #fff;
+  --overlay-black: rgba(0, 0, 0, 0.8);
+  --border-light: rgba(255, 255, 255, 0.3);
+  --hover:white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  background-image: url("netflix.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+.main .box {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 80vh;
+  opacity: 0.7;
+  background-color: var(--bg-dark);
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  height: 60px;
+  padding: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+nav img {
+  width: 150px;
+  height: 190px;
+  max-height: 60px;
+  margin: 12px 0;
+  margin-top: 14%;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+nav button {
+  background-color: var(--overlay-black);
+  color: var(--text-white);
+  width: 100px;
+  height: 30px;
+  padding: 2px;
+  text-align: center;
+  letter-spacing: 2px;
+  border: 1px solid var(--border-light);
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+nav button:hover {
+  background-color: var(--text-white);
+  color: var(--bg-dark);
+}
+
+.button_2 {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  width: 90px;
+  border: none;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.hero {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--text-white);
+  position: relative;
+  z-index: 2;
+  gap: 23px;
+  padding: 30px;
+  text-align: center;
+}
+
+
+.hero > :first-child {
+  font-weight: bolder;
+  font-size: 43px;
+}
+
+.hero > :nth-child(2) {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.hero > :nth-child(3) {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* responsive ke liye */
+  gap: 10px;
+}
+
+.email-form input {
+  margin-top: 10%;
+  color: var(--text-white);
+  padding: 10px;
+  font-size: 20px;
+  width: 340px;
+  height: 30px;
+  max-width: 100%;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  background-color: var(--overlay-black);
+}
+.button_3 {
+  margin-top: 10%;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border: none;
+  height: 53px;
+  width: 190px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_3:hover {
+  cursor: pointer;
+  background: white;
+  font-weight: bolder;
+  color: black;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.separation {
+  background-color: var(--border-light);
+  height: 5px;
+}
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 30px;
+  color: var(--text-white);
+  max-width: 80vw;
+  margin: auto;
+  gap: 20px;
+  background: linear-gradient(
+    -45deg,
+    #000000,
+    #222222,
+    #444444,
+    #ffffff,
+    #333333,
+    #111111
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.secimg {
+  position: relative;
+  width: 100%; /* was 10vw, changed to full width */
+  max-width: 200px; /* limit the max width */
+  margin: auto;
+}
+
+.secimg img {
+  position: relative;
+  width: 90%;
+  height: auto;
+  display: block;
+  z-index: 1;
+  cursor: pointer;
+}
+.secimg img:hover {
+  transform: scale(1.02);
+  transition: all 1s ease-in-out;
+}
+
+.secimg video {
+  position: absolute;
+  top: 23%;
+  left: 13%;
+  margin-left: 7px;
+  width: 60%;
+  height: 50%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+section.first > div {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  letter-spacing: 1px;
+  max-width: 500px;
+}
+
+section.first > div :first-child {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+section.first > div :nth-child(2) {
+  font-size: 20px;
+}
+section.first > div :nth-child(3) {
+  font-size: 13px;
+  color: slategrey;
+}
+.hero > * {
+  animation: fadeIn 1s ease-in-out;
+}
+.faq h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 2%;
+}
+svg {
+  color: white;
+}
+.faq {
+  background-color: black;
+  color: var(--text-white);
+}
+.faq {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 120%;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  animation: gradientLoop 5s infinite alternate ease-in-out;
+  box-shadow: 0 0 10px rgba(143, 78, 78, 0.05);
+  transition: transform 0.3s ease;
+  letter-spacing: 0.5px;
+}
+.faqbox {
+  justify-content: space-between;
+  display: flex;
+  background: linear-gradient(40deg, #746f6fa5, #0000008d);
+  padding: 24px;
+  max-width: 60vw;
+  margin: 34px auto;
+  transition: all 1s ease-out;
+}
+.faqbox .question {
+  padding: 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faqbox:hover {
+  background: linear-gradient(
+    40deg,
+    #ff1e1e81,
+    #090909
+  ); /* Netflix Red shades */
+  color: #fff; /* Soft white text */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.337); /* Red glow */
+  transform: scale(1.02);
+  transition: all 1s ease-in-out;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-column a {
+  color: #999;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+footer span {
+  padding: 20px;
+  color: #999;
+  display: block;
+  font-size: 110%;
+}
+.footer-column a {
+  color: gray;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  background-color: rgba(128, 128, 128, 0.176);
+  border: 1px solid rgba(200, 200, 200, 0.128);
+  border-radius: 3px;
+  padding: 6px;
+  width: 140px;
+  color: var(--hover);
+  transition: 0.3s ease;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Starting point: bilkul transparent */
+    transform: translateY(10px); /* Thoda neeche (10 pixels) se start */
+  }
+  100% {
+    opacity: 1; /* Ending point: fully visible */
+    transform: translateY(0); /* Original position (move up 10px) */
+  }
+}
+::-webkit-scrollbar {
+  width: 8px; /* Scrollbar ki width 8 pixels */
+}
+::-webkit-scrollbar-track {
+  background: #222; /* Scrollbar ke peeche ka background (track) dark grey (#222) */
+}
+::-webkit-scrollbar-thumb {
+  background-color: red; /* Jo scroll karte hain uska "thumb" (wo draggable part) red color ka */
+  border-radius: 10px; /* Rounded corners dena, taaki smooth lage */
+}
+* {
+  scrollbar-width: thin; /* Scrollbar ki width chhoti kar di */
+  scrollbar-color: red #222; /* Thumb red aur track #222 color ka */
+}
+
+/* media quarry */
+@media (max-width: 768px) {
+  .hero > :first-child {
+    font-size: 30px;
+  }
+
+  .hero > :nth-child(2) {
+    font-size: 20px;
+  }
+
+  .hero > :nth-child(3) {
+    font-size: 12px;
+  }
+
+  .email-form input {
+    width: 100%;
+  }
+
+  .button_3 {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+}
